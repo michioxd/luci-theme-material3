@@ -6,6 +6,9 @@
 
 include $(TOPDIR)/rules.mk
 
+$(if $(wildcard $(CURDIR)/htdocs/luci-static/material3/cascade.css),,\
+  $(error Missing htdocs/luci-static/material3/cascade.css. Make sure to run 'bun build:css' in the package directory before building the package.))
+
 LUCI_TITLE:=Material 3 Theme
 LUCI_DEPENDS:=+luci-base
 
