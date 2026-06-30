@@ -93,7 +93,7 @@ textarea:hover,
 select:hover,
 .cbi-select:hover,
 .cbi-dropdown:not(.btn):not(.cbi-button):hover {
-    background: rgba(var(--color-on-surface), 0.08);
+    background: rgb(var(--color-surface-container-high));
     box-shadow: inset 0 -1px 0 rgb(var(--color-on-surface));
 }
 
