@@ -350,8 +350,11 @@ label>input[type="radio"] {
     color: rgb(var(--color-on-primary));
     background: rgb(var(--color-primary));
     border-radius: 50%;
-    font-size: 0.7rem;
+    font-size: .7rem;
     font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
 @media screen and (max-width: 767px) {
