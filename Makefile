@@ -6,17 +6,15 @@
 
 include $(TOPDIR)/rules.mk
 
-LUCI_TITLE:=Bootstrap Theme (default)
+LUCI_TITLE:=Material 3 Theme
 LUCI_DEPENDS:=+luci-base
 
 PKG_LICENSE:=Apache-2.0
 
-define Package/luci-theme-bootstrap/postrm
+define Package/luci-theme-material3/postrm
 #!/bin/sh
 [ -n "$${IPKG_INSTROOT}" ] || {
-	uci -q delete luci.themes.Bootstrap
-	uci -q delete luci.themes.BootstrapDark
-	uci -q delete luci.themes.BootstrapLight
+	uci -q delete luci.themes.Material3
 	uci commit luci
 }
 endef

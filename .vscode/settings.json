@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.ut": "html",
+        "*.uc": "javascript"
+    }
+}
