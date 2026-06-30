@@ -1,0 +1,16 @@
+.cbi-progressbar {
+    --shape-corner: var(--shape-corner-none);
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--shape-corner);
+    background-color: rgb(var(--surface-container-highest));
+    height: .25rem;
+
+    &>div {
+        height: 100%;
+        transition: width var(--motion-duration-long2) var(--motion-easing-standard);
+        background-color: rgb(var(--color-primary));
+    }
+}

@@ -1,0 +1,13 @@
+@use "color";
+@use "font";
+@use "motion";
+@use "shape";
+@use "typescale";
+@use "ripple";
+@use "components";
+
+body {
+    color: rgb(var(--color-on-background));
+    background-color: rgb(var(--color-background));
+    font-family: font.$font-family;
+}

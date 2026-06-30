@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "Google Sans Flex";
+    src: url("./fonts/GoogleSansFlex-VariableFont_GRAD,ROND,opsz,slnt,wdth,wght.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 100 1000;
+    font-stretch: 25% 151%;
+    font-display: swap;
+}
+
+$font-family: "Google Sans Flex", "Google Sans", "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;

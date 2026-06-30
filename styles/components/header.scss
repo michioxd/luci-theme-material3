@@ -1,0 +1,19 @@
+header {
+    --shape-corner: var(--shape-corner-none);
+    --z-index: 2000;
+    position: sticky;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-bottom-left-radius: var(--shape-corner);
+    border-bottom-right-radius: var(--shape-corner);
+    z-index: var(--z-index);
+    transition: top var(--motion-duration-long2) var(--motion-easing-standard), height var(--motion-duration-long2) var(--motion-easing-standard), box-shadow var(--motion-duration-short4) var(--motion-easing-linear), background-color var(--motion-duration-short4) var(--motion-easing-linear);
+    padding: 0.75rem 0.5rem;
+    height: 4rem;
+    background: rgb(var(--color-surface-container));
+}
