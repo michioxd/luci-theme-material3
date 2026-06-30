@@ -1,6 +1,6 @@
 {
     "files.associations": {
-        "*.ut": "html",
+        "*.ut": "jinja-html",
         "*.uc": "javascript"
     }
 }
