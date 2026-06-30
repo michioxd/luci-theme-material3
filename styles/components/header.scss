@@ -7,7 +7,7 @@ header {
     left: 0px;
     display: flex;
     flex: 0 0 auto;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     border-bottom-left-radius: var(--shape-corner);
     border-bottom-right-radius: var(--shape-corner);
@@ -16,4 +16,59 @@ header {
     padding: 0.75rem 0.5rem;
     height: 4rem;
     background: rgb(var(--color-surface-container));
+    margin: 0 0 15px;
+}
+
+header a {
+    color: rgb(var(--color-on-surface));
+    text-decoration: none;
+}
+
+header .brand:hover,
+header ul .active>a {
+    color: rgb(var(--color-primary));
+    text-decoration: none;
+}
+
+header .brand {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.5rem;
+    padding: 0 1rem;
+    color: rgb(var(--color-on-surface));
+    border-radius: var(--shape-corner-full);
+    font-size: var(--typescale-title-large-size);
+    font-weight: var(--typescale-title-medium-weight);
+}
+
+header .pull-right {
+    margin-left: auto;
+}
+
+header p {
+    margin: 0;
+    color: rgb(var(--color-on-surface-variant));
+}
+
+header [data-indicator] {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.5rem;
+    padding: 0 0.5rem;
+    margin-left: 0.5rem;
+    color: rgb(var(--color-on-secondary-container));
+    background: rgb(var(--color-secondary-container));
+    border-radius: var(--shape-corner-small);
+    font-size: var(--typescale-label-small-size);
+    font-weight: var(--typescale-label-small-weight);
+    text-transform: uppercase;
+}
+
+header [data-indicator][data-clickable] {
+    cursor: pointer;
+}
+
+header [data-indicator][data-style="active"] {
+    color: rgb(var(--color-on-primary));
+    background: rgb(var(--color-primary));
 }

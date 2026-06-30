@@ -2,7 +2,9 @@
 .btn,
 .cbi-button,
 .rippleJS {
+    position: relative;
     overflow: hidden;
+    mask-image: radial-gradient(circle, white, black);
     -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
 
     &.fill::after {
@@ -20,6 +22,8 @@
 
     .ripple {
         position: absolute;
+        top: 0;
+        left: 0;
         border-radius: 100%;
         background: var(--comp-ripple-state-layer-color, currentColor);
         opacity: 0.4;
@@ -51,4 +55,16 @@
             transform: scale(1);
         }
     }
+}
+
+.drag-handle.ripple-js,
+.drag-handle.rippleJS,
+.drag-handle.btn,
+.drag-handle.cbi-button {
+    overflow: visible;
+    touch-action: none;
+    user-select: text;
+    mask-image: none;
+    -webkit-mask-image: none;
+    -webkit-user-drag: element;
 }

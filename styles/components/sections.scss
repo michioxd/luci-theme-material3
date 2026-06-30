@@ -1,0 +1,319 @@
+.cbi-section,
+.cbi-tblsection,
+.panel,
+.well,
+fieldset,
+.table {
+    color: rgb(var(--color-on-surface));
+}
+
+.cbi-section,
+.cbi-tblsection,
+.panel,
+.well {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgb(var(--color-surface-container-high));
+    border-radius: var(--shape-corner-large);
+    box-shadow: var(--elevation-level1);
+
+    h3 {
+        margin-top: 0;
+    }
+}
+
+.modal .cbi-section {
+    background: rgb(var(--color-surface-container-low));
+}
+
+.cbi-section>h3,
+.cbi-tblsection>h3,
+.panel-title {
+    margin-top: 0;
+}
+
+.cbi-section-node {
+    margin: 1rem 0;
+}
+
+.cbi-section-node:first-child {
+    margin-top: 0;
+}
+
+.cbi-section-create,
+.cbi-section-remove {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.cbi-section-create-name {
+    flex: 1 1 12rem;
+}
+
+.cbi-section-remove>.cbi-button {
+    margin-left: auto;
+}
+
+.cbi-value ul {
+    margin: 0.25rem 0 0.25rem 1.25rem;
+    padding: 0;
+}
+
+.cbi-value li {
+    margin: 0.25rem 0;
+}
+
+.cbi-value-helpicon img {
+    opacity: 0.7;
+    vertical-align: middle;
+}
+
+.cbi-value-helpicon:hover img {
+    opacity: 1;
+}
+
+.cbi-value-error {
+    color: rgb(var(--color-error));
+}
+
+.cbi-value-error input,
+.cbi-value-error textarea,
+.cbi-value-error select,
+.cbi-value-error .cbi-dropdown:not(.btn):not(.cbi-button) {
+    border-color: rgb(var(--color-error));
+}
+
+.cbi-value-error .cbi-value-field::after {
+    display: block;
+    margin-top: 0.25rem;
+    color: rgb(var(--color-error));
+    font-size: var(--typescale-body-small-size);
+}
+
+.cbi-input-invalid,
+input.cbi-input-invalid,
+select.cbi-input-invalid,
+textarea.cbi-input-invalid {
+    border-color: rgb(var(--color-error)) !important;
+    color: rgb(var(--color-on-error-container));
+    background-color: rgb(var(--color-error-container));
+}
+
+.cbi-input-invalid:focus {
+    outline-color: rgb(var(--color-error));
+}
+
+.cbi-map-descr,
+.cbi-section-descr,
+.cbi-value-description {
+    max-width: 75ch;
+}
+
+.cbi-section-table-row-placeholder {
+    min-height: 3rem;
+}
+
+[data-field],
+[data-name],
+[data-widget] {
+    max-width: 100%;
+}
+
+[data-widget="checkbox"] {
+    display: inline-flex;
+    align-items: center;
+}
+
+[data-widget="button"] {
+    display: inline-flex;
+}
+
+[data-template] {
+    box-sizing: border-box;
+}
+
+.map {
+    width: 100%;
+}
+
+.map h2,
+.map h3 {
+    margin-top: 1.5rem;
+}
+
+fieldset legend {
+    padding: 0 0.5rem;
+}
+
+.inline {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.clearfix::after,
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+}
+
+.row>[class*="span"] {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.span12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.span11 {
+    flex: 0 0 91.6667%;
+    max-width: 91.6667%;
+}
+
+.span10 {
+    flex: 0 0 83.3333%;
+    max-width: 83.3333%;
+}
+
+.span9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+.span8 {
+    flex: 0 0 66.6667%;
+    max-width: 66.6667%;
+}
+
+.span7 {
+    flex: 0 0 58.3333%;
+    max-width: 58.3333%;
+}
+
+.span6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.span5 {
+    flex: 0 0 41.6667%;
+    max-width: 41.6667%;
+}
+
+.span4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+}
+
+.span3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.span2 {
+    flex: 0 0 16.6667%;
+    max-width: 16.6667%;
+}
+
+.span1 {
+    flex: 0 0 8.3333%;
+    max-width: 8.3333%;
+}
+
+.offset12 {
+    margin-left: 100%;
+}
+
+.offset11 {
+    margin-left: 91.6667%;
+}
+
+.offset10 {
+    margin-left: 83.3333%;
+}
+
+.offset9 {
+    margin-left: 75%;
+}
+
+.offset8 {
+    margin-left: 66.6667%;
+}
+
+.offset7 {
+    margin-left: 58.3333%;
+}
+
+.offset6 {
+    margin-left: 50%;
+}
+
+.offset5 {
+    margin-left: 41.6667%;
+}
+
+.offset4 {
+    margin-left: 33.3333%;
+}
+
+.offset3 {
+    margin-left: 25%;
+}
+
+.offset2 {
+    margin-left: 16.6667%;
+}
+
+.offset1 {
+    margin-left: 8.3333%;
+}
+
+@media screen and (max-width: 767px) {
+    .row {
+        display: block;
+        margin: 0;
+    }
+
+    .row>[class*="span"],
+    [class*="span"] {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .cbi-section,
+    .cbi-tblsection,
+    .panel,
+    .well {
+        padding: 0.75rem;
+        border-radius: var(--shape-corner-medium);
+    }
+}

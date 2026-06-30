@@ -1,13 +1,10 @@
 @use "color";
+@use "legacy-vars";
 @use "font";
 @use "motion";
 @use "shape";
 @use "typescale";
 @use "ripple";
+@use "base";
+@use "typography";
 @use "components";
-
-body {
-    color: rgb(var(--color-on-background));
-    background-color: rgb(var(--color-background));
-    font-family: font.$font-family;
-}

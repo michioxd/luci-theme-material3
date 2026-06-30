@@ -1,0 +1,603 @@
+.ifacebox,
+.ifacebadge,
+.zonebadge,
+.cbi-filebrowser {
+    color: rgb(var(--color-on-surface));
+    background: rgb(var(--color-surface-container-low));
+    border: 1px solid rgb(var(--color-outline-variant));
+    border-radius: var(--shape-corner-medium);
+    box-shadow: var(--elevation-level1);
+}
+
+.ifacebox {
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 100px;
+    margin: 0 0.625rem;
+    text-align: center;
+    line-height: 1.2em;
+    white-space: nowrap;
+}
+
+.ifacebox .ifacebox-head {
+    padding: 0.375rem 0.5rem;
+    color: rgb(var(--color-on-secondary-container));
+    background: rgb(var(--color-secondary-container));
+    border-radius: var(--shape-corner-medium) var(--shape-corner-medium) 0 0;
+}
+
+.ifacebox .ifacebox-head.active {
+    color: rgb(var(--color-on-primary));
+    background: rgb(var(--color-primary));
+}
+
+[data-darkmode="true"] .zonebadge[style],
+[data-darkmode="true"] .ifacebox-head[style] {
+    background: linear-gradient(rgba(var(--zone-color-rgb), 0.4), rgba(var(--zone-color-rgb), 0.3)) !important;
+}
+
+.ifacebox .ifacebox-body {
+    padding: 0.5rem;
+}
+
+#cbi-network-interface .ifacebox-body {
+    white-space: normal;
+}
+
+#cbi-network-interface .ifacebox img {
+    width: 24px;
+    height: 24px;
+}
+
+.ifacebadge {
+    display: inline-block;
+    flex-direction: row;
+    padding: 0.25rem;
+    cursor: default;
+    line-height: 1.2em;
+}
+
+.ifacebadge img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+}
+
+.ifacebadge-active {
+    border-color: rgb(var(--color-primary));
+    font-weight: 700;
+}
+
+.network-status-table {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.network-status-table .ifacebox {
+    flex-grow: 1;
+    margin: 0.5rem;
+}
+
+.network-status-table .ifacebox-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: left;
+}
+
+.network-status-table .ifacebox-body>* {
+    margin: 0.25rem;
+}
+
+.network-status-table .ifacebox-body>span {
+    flex: 10 10 auto;
+    height: 100%;
+}
+
+.network-status-table .ifacebox-body>div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.125rem;
+}
+
+#dsl_status_table .ifacebox-body span>strong {
+    display: inline-block;
+    min-width: 35%;
+}
+
+.ifacebadge.large,
+.network-status-table .ifacebox-body .ifacebadge {
+    display: flex;
+    flex: 1;
+    min-width: 220px;
+    margin: 0.125rem;
+    padding: 0.25rem;
+}
+
+.ifacebadge.large {
+    display: inline-flex;
+}
+
+.network-status-table .ifacebox-body .ifacebadge>span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ifacebadge>*,
+.ifacebadge.large>* {
+    margin: 0 0.125rem;
+}
+
+.zonebadge {
+    display: inline-block;
+    padding: 0.25rem;
+    white-space: nowrap;
+}
+
+.zonebadge>em,
+.zonebadge>strong {
+    display: inline-block;
+    margin: 0 0.125rem;
+}
+
+.zonebadge input {
+    width: 6em;
+}
+
+.zonebadge>.ifacebadge {
+    margin-left: 0.125rem;
+}
+
+.zonebadge-empty {
+    color: rgb(var(--color-outline));
+    border-style: dashed;
+    box-shadow: none;
+    font-size: smaller;
+    font-style: italic;
+}
+
+.zonebadge .cbi-tooltip {
+    padding: 0.25rem;
+    background: rgb(var(--color-surface-container));
+    margin: -1.6em 0 0 -5px;
+    pointer-events: none;
+}
+
+.zonebadge .cbi-tooltip>* {
+    position: relative;
+    z-index: 2;
+    margin: 1px;
+}
+
+.zone-forwards {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.zone-forwards>* {
+    flex: 1 1 40%;
+    padding: 1px;
+    text-wrap: auto;
+}
+
+.zone-forwards>span {
+    flex-basis: 10%;
+    text-align: center;
+}
+
+.zone-forwards .zone-src,
+.zone-forwards .zone-dest {
+    display: flex;
+    flex-direction: column;
+}
+
+div.cbi-value var,
+.td.cbi-value-field var {
+    color: rgb(var(--color-primary));
+    font-style: italic;
+}
+
+div.cbi-value var[data-tooltip],
+.td.cbi-value-field var[data-tooltip],
+div.cbi-value var.cbi-tooltip-container,
+.td.cbi-value-field var.cbi-tooltip-container {
+    cursor: help;
+    border-bottom: 1px dotted rgb(var(--color-primary));
+}
+
+div.cbi-value var.cbi-tooltip-container,
+.td.cbi-value-field var.cbi-tooltip-container .cbi-tooltip {
+    color: rgb(var(--color-on-surface));
+    font-style: normal;
+    white-space: normal;
+}
+
+.uci-change-list {
+    line-height: 170%;
+    white-space: pre;
+}
+
+.uci-dialog div>del,
+.uci-dialog div>ins,
+.uci-dialog div>var {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 2px;
+    padding: 0.25rem;
+    color: rgb(var(--color-on-surface));
+    background: rgb(var(--color-surface-container));
+    border: 1px solid rgb(var(--color-outline-variant));
+    border-radius: var(--shape-corner-extra-small);
+    text-overflow: ellipsis;
+}
+
+.uci-dialog div>ins,
+.uci-dialog var>ins {
+    background: rgba(var(--color-green-primary), 0.18);
+    border-color: rgba(var(--color-green-primary), 0.4);
+}
+
+.uci-dialog div>del,
+.uci-dialog var>del {
+    background: rgba(var(--color-error), 0.18);
+    border-color: rgba(var(--color-error), 0.4);
+}
+
+.uci-change-list>var>* {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.uci-dialog del,
+.uci-dialog ins,
+.uci-dialog var {
+    display: block;
+    color: rgb(var(--color-on-surface));
+    font-family: monospace;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.uci-change-legend {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.uci-change-legend-label {
+    display: flex;
+    flex-basis: 150px;
+    align-items: center;
+    margin: 2px;
+}
+
+.uci-change-legend-label>ins,
+.uci-change-legend-label>del,
+.uci-change-legend-label>var {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.uci-change-legend-label>*>* {
+    flex-basis: 100%;
+    padding: 1px;
+}
+
+#applyreboot-section {
+    line-height: 300%;
+}
+
+#view>div.spinning:first-child {
+    display: table;
+    margin: 15vh auto;
+}
+
+.spinning {
+    position: relative;
+    padding-left: 32px !important;
+}
+
+.spinning>.md-spinner {
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 6px;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    direction: ltr;
+    line-height: 0;
+    flex: 0 0 20px;
+    transform-box: border-box;
+    transform-origin: center center;
+    animation: material-spinner-container-rotate 1568ms linear infinite;
+}
+
+.spinning>.md-spinner>.spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-color: currentColor;
+    opacity: 1;
+    white-space: nowrap;
+    transform-box: border-box;
+    transform-origin: center center;
+    animation: material-spinner-fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation-fill-mode: both;
+}
+
+.spinning>.md-spinner>.spinner::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 45%;
+    width: 10%;
+    border-width: 3px;
+    border-top-style: solid;
+    border-color: inherit;
+    border-radius: 50%;
+    transform: rotate(3deg);
+}
+
+.spinning>.md-spinner>.spinner>.circle {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    border-color: inherit;
+}
+
+.spinning>.md-spinner>.spinner>.circle::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 200%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: inherit;
+    border-bottom-color: transparent !important;
+    border-radius: 50%;
+    animation-duration: 1333ms;
+    animation-delay: var(--material-spinner-spin-delay, 0ms);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.spinning>.md-spinner>.spinner>.circle.left::after {
+    left: 0;
+    border-right-color: transparent !important;
+    transform: rotate(129deg);
+    animation-name: material-spinner-left-spin;
+}
+
+.spinning>.md-spinner>.spinner>.circle.right::after {
+    left: -100%;
+    border-left-color: transparent !important;
+    transform: rotate(-129deg);
+    animation-name: material-spinner-right-spin;
+}
+
+@keyframes material-spinner-container-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes material-spinner-left-spin {
+    0% {
+        transform: rotate(130deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(130deg);
+    }
+}
+
+@keyframes material-spinner-right-spin {
+    0% {
+        transform: rotate(-130deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(-130deg);
+    }
+}
+
+@keyframes material-spinner-fill-unfill-rotate {
+    12.5% {
+        transform: rotate(135deg);
+    }
+
+    25% {
+        transform: rotate(270deg);
+    }
+
+    37.5% {
+        transform: rotate(405deg);
+    }
+
+    50% {
+        transform: rotate(540deg);
+    }
+
+    62.5% {
+        transform: rotate(675deg);
+    }
+
+    75% {
+        transform: rotate(810deg);
+    }
+
+    87.5% {
+        transform: rotate(945deg);
+    }
+
+    100% {
+        transform: rotate(1080deg);
+    }
+}
+
+.cbi-filebrowser {
+    display: flex;
+    flex-direction: column;
+    min-width: 210px;
+    max-width: 100%;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.cbi-filebrowser.open {
+    height: auto;
+    opacity: 1;
+    overflow: visible;
+    transition: opacity var(--motion-duration-medium1) var(--motion-easing-standard);
+}
+
+.cbi-filebrowser>* {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 0 0.25rem;
+    margin: 0.25rem 0.25rem 0;
+    border-bottom: 1px solid rgb(var(--color-outline-variant));
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cbi-filebrowser .cbi-button-positive {
+    margin-right: 0.25rem;
+}
+
+.cbi-filebrowser>div {
+    border-bottom: none;
+}
+
+.cbi-filebrowser>ul>li {
+    display: flex;
+    flex-direction: row;
+}
+
+.cbi-filebrowser>ul>li:hover {
+    background: rgba(var(--color-on-surface), 0.08);
+}
+
+.cbi-filebrowser>ul>li>div:first-child {
+    flex: 10;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cbi-filebrowser>ul>li>div:last-child {
+    flex: 3;
+    text-align: right;
+}
+
+.cbi-filebrowser>ul>li>div:last-child>button {
+    padding: 0.125rem 0.25rem;
+    margin: 1px 0 1px 0.25rem;
+}
+
+.cbi-filebrowser .upload {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -0.125rem 0.25rem;
+    padding: 0 0 0.125rem;
+    border-bottom: 1px solid rgb(var(--color-outline-variant));
+}
+
+.cbi-filebrowser .upload>* {
+    flex: 1;
+    margin: 0.125rem;
+}
+
+.cbi-filebrowser .upload>.btn {
+    flex-basis: 60px;
+}
+
+.cbi-filebrowser .upload>div {
+    flex: 10;
+    min-width: 150px;
+}
+
+.cbi-filebrowser .upload>div>input {
+    width: 100%;
+}
+
+.assoclist .ifacebadge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: normal;
+    text-align: center;
+}
+
+.assoclist .ifacebadge>img {
+    margin: 0.2rem;
+}
+
+.assoclist .td:nth-of-type(3),
+.assoclist .td:nth-of-type(5) {
+    width: 25%;
+}
+
+.assoclist .td:nth-of-type(6) button {
+    word-break: normal;
+}
+
+[data-darkmode="true"] [data-page="admin-statistics-graphs"] [data-plugin] img {
+    filter: invert(100%) hue-rotate(150deg);
+}
+
+[data-page="admin-system-admin-sshkeys"] .cbi-dynlist {
+    max-width: none;
+}
+
+#view div[style]>svg {
+    background-color: rgb(var(--color-surface)) !important;
+}
+
+#view div[style]>svg line[style] {
+    stroke: rgb(var(--color-on-surface)) !important;
+}
+
+#modemenu li:last-child span.divider {
+    display: none;
+}
+
+body[data-page="admin-status-overview"] .cbi-title .label {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 481px) {
+    body[data-page="admin-status-overview"] .cbi-title .label {
+        line-height: 1em;
+        margin: 0.7em 0;
+    }
+}
+
+body[data-page="admin-status-overview"] .cbi-title .label.notice {
+    opacity: 0.38;
+}
+
+body[data-page="admin-status-overview"] .cbi-title .label.notice:hover {
+    opacity: initial;
+}

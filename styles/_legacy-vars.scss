@@ -1,0 +1,39 @@
+:root {
+    --elevation-level0: none;
+    --elevation-level1: 0 0.5px 1.5px 0 rgba(var(--color-shadow), 0.19), 0 0 1px 0 rgba(var(--color-shadow), 0.039);
+    --elevation-level2: 0 0.85px 3px 0 rgba(var(--color-shadow), 0.19), 0 0.25px 1px 0 rgba(var(--color-shadow), 0.039);
+    --elevation-level3: 0 1.25px 5px 0 rgba(var(--color-shadow), 0.19), 0 0.333px 1.5px 0 rgba(var(--color-shadow), 0.039);
+    --elevation-level4: 0 1.85px 6.25px 0 rgba(var(--color-shadow), 0.19), 0 0.5px 1.75px 0 rgba(var(--color-shadow), 0.039);
+    --elevation-level5: 0 2.75px 9px 0 rgba(var(--color-shadow), 0.19), 0 0.25px 3px 0 rgba(var(--color-shadow), 0.039);
+
+    --text-color-highest: rgb(var(--color-on-surface));
+    --text-color-high: rgba(var(--color-on-surface), 0.87);
+    --text-color-medium: rgba(var(--color-on-surface), 0.68);
+    --text-color-low: rgba(var(--color-on-surface), 0.38);
+    --background-color-high: rgb(var(--color-surface));
+    --background-color-medium: rgb(var(--color-surface-container));
+    --background-color-low: rgb(var(--color-surface-container-high));
+    --border-color-high: rgb(var(--color-outline));
+    --border-color-medium: rgb(var(--color-outline-variant));
+    --border-color-low: rgba(var(--color-outline), 0.24);
+    --primary-color-high: rgb(var(--color-primary));
+    --primary-color-medium: rgb(var(--color-primary-container));
+    --primary-color-low: rgba(var(--color-primary), 0.12);
+    --on-primary-color: rgb(var(--color-on-primary));
+    --success-color-high: rgb(var(--color-green-primary));
+    --success-color-high-rgb: var(--color-green-primary);
+    --on-success-color: rgb(var(--color-green-on-primary));
+    --warn-color-high: rgb(var(--color-yellow-primary));
+    --on-warn-color: rgb(var(--color-on-surface));
+    --error-color-high: rgb(var(--color-error));
+    --error-color-high-rgb: var(--color-error);
+    --disabled-opacity: 0.38;
+    --zone-color-rgb: var(--color-primary);
+    --on-color: rgb(var(--color-on-surface));
+}
+
+html.dark,
+html[data-darkmode="true"],
+:root[data-darkmode="true"] {
+    --warn-color-high: rgb(var(--color-yellow-primary-dark));
+}

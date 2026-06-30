@@ -1,0 +1,81 @@
+#modal_overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2300;
+    display: none;
+    justify-content: center;
+    padding: 3rem;
+    background: rgba(var(--color-scrim), 0.4);
+    overflow: auto;
+}
+
+body.modal-overlay-active {
+    overflow: hidden;
+}
+
+body.modal-overlay-active #modal_overlay {
+    display: flex;
+}
+
+.modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: min(900px, 100%);
+    padding: 1.5rem;
+    height: fit-content;
+    color: rgb(var(--color-on-surface));
+    background: rgb(var(--color-surface-container-high));
+    border-radius: var(--shape-corner-extra-large);
+    box-shadow: var(--elevation-level3);
+
+    h4 {
+        margin-top: 0;
+    }
+}
+
+.modal>* {
+    max-width: 100%;
+}
+
+.modal>pre,
+.modal>textarea {
+    overflow: auto;
+}
+
+.modal>.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    padding-top: 1.5rem;
+}
+
+.modal>.button-row>button:not(:last-of-type) {
+    margin-right: 0.25rem;
+}
+
+.modal>.button-row>button:first-of-type {
+    margin-left: auto;
+}
+
+#modal_overlay>.modal.uci-dialog,
+#modal_overlay>.modal.cbi-modal {
+    max-width: 900px;
+}
+
+#modal_overlay>.modal.login>button.important {
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 120% !important;
+}
+
+@media screen and (max-width: 767px) {
+    #modal_overlay {
+        padding: 1rem;
+    }
+
+    .modal {
+        border-radius: var(--shape-corner-large);
+    }
+}

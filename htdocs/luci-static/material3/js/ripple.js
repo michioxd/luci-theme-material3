@@ -33,6 +33,10 @@
 
     function findRippleHolder(target) {
         while (target && target !== document) {
+            if (target.nodeType === 1 && hasClass(target, "drag-handle")) {
+                return null;
+            }
+
             if (target.nodeType === 1 && isRippleHolder(target)) {
                 return target;
             }
@@ -44,7 +48,12 @@
     }
 
     function isDisabled(element) {
-        return element.disabled || element.getAttribute("disabled") !== null || hasClass(element, "disabled");
+        return (
+            element.disabled ||
+            element.getAttribute("disabled") !== null ||
+            hasClass(element, "disabled") ||
+            hasClass(element, "drag-handle")
+        );
     }
 
     function getRippleOption(holder, name) {
@@ -63,6 +72,8 @@
         var opacity;
         var background;
         var releaseEvent;
+        var scrollLeft;
+        var scrollTop;
 
         if (!holder || isDisabled(holder)) {
             return false;
@@ -77,8 +88,10 @@
         addClass(holder, "active");
 
         rect = holder.getBoundingClientRect();
-        x = point.clientX - rect.left;
-        y = point.clientY - rect.top;
+        scrollLeft = holder.scrollLeft || 0;
+        scrollTop = holder.scrollTop || 0;
+        x = point.clientX - rect.left + scrollLeft;
+        y = point.clientY - rect.top + scrollTop;
         max =
             rect.width === rect.height
                 ? rect.width * 1.412
@@ -89,8 +102,8 @@
         ripple.className = "ripple";
         ripple.style.width = dim;
         ripple.style.height = dim;
-        ripple.style.marginLeft = -max + x + "px";
-        ripple.style.marginTop = -max + y + "px";
+        ripple.style.left = x - max + "px";
+        ripple.style.top = y - max + "px";
 
         opacity = getRippleOption(holder, "opacity");
         background = getRippleOption(holder, "background");

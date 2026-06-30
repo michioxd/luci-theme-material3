@@ -1,15 +1,22 @@
 .btn,
-.cbi-button {
+.cbi-button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
     --shape-corner: var(--shape-corner-full);
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     flex-shrink: 0;
     overflow: hidden;
     text-align: center;
     border-radius: var(--shape-corner);
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-    transition: box-shadow var(--motion-duration-short4) var(--motion-easing-linear);
+    transition:
+        background-color var(--motion-duration-short4) var(--motion-easing-standard),
+        box-shadow var(--motion-duration-short4) var(--motion-easing-linear),
+        color var(--motion-duration-short4) var(--motion-easing-standard);
     min-width: 3rem;
     height: 2.5rem;
     color: rgb(var(--color-primary));
@@ -25,12 +32,64 @@
     border: none;
     box-shadow: var(--elevation-level1);
     background: rgb(var(--color-surface-container-low));
+    padding: 0 1rem;
     --comp-ripple-state-layer-color: rgb(var(--color-primary));
+}
+
+.btn:hover,
+.btn:focus,
+.cbi-button:hover,
+.cbi-button:focus,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    box-shadow: var(--elevation-level2);
+    background: rgba(var(--color-primary), 0.08);
+    text-decoration: none;
+}
+
+.btn.active,
+.btn:active,
+.cbi-button:active {
+    box-shadow: var(--elevation-level1);
+}
+
+.btn.disabled,
+.btn[disabled],
+.cbi-button[disabled] {
+    cursor: default;
+    opacity: 0.38;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.btn.drag-handle,
+.cbi-button.drag-handle {
+    cursor: move;
+    touch-action: none;
+    user-select: text;
+    -webkit-user-drag: element;
+}
+
+.btn.large {
+    height: 3rem;
+    padding: 0 1.5rem;
+    font-size: var(--typescale-title-small-size);
+}
+
+.btn.small {
+    height: 2rem;
+    padding: 0 0.75rem;
+    font-size: var(--typescale-label-medium-size);
 }
 
 .btn.primary,
 .cbi-button-action.important,
+.cbi-button-action,
 .cbi-page-actions .cbi-button-apply,
+.cbi-button-apply,
+.cbi-button-reload,
+.cbi-button-edit,
 .cbi-section-actions .cbi-button-edit {
     color: rgb(var(--color-on-primary));
     background: rgb(var(--color-primary));
@@ -44,4 +103,156 @@
     color: rgb(var(--color-green-primary));
     --comp-ripple-state-layer-color: rgb(var(--color-green-primary));
     border: .0625rem solid rgba(var(--color-green-primary), 0.5);
+}
+
+.cbi-button-neutral,
+.cbi-button-download,
+.cbi-button-find,
+.cbi-button-link,
+.cbi-button-up,
+.cbi-button-down {
+    color: rgb(var(--color-secondary));
+    background: rgb(var(--color-secondary-container));
+    --comp-ripple-state-layer-color: rgb(var(--color-on-secondary-container));
+}
+
+.cbi-button-negative,
+.cbi-section-remove .cbi-button,
+.cbi-button-reset,
+.cbi-button-remove,
+.cbi-button-negative.important {
+    color: rgb(var(--color-on-error));
+    background: rgb(var(--color-error));
+    --comp-ripple-state-layer-color: rgb(var(--color-on-error));
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: rgba(var(--color-error), 0.8);
+    }
+}
+
+.cbi-button-positive.important,
+.cbi-page-actions .cbi-button-save {
+    color: rgb(var(--color-green-on-primary));
+    background: rgb(var(--color-green-primary));
+}
+
+.btn.primary:hover,
+.btn.primary:focus,
+.cbi-button-action.important:hover,
+.cbi-button-action.important:focus,
+.cbi-button-action:hover,
+.cbi-button-action:focus,
+.cbi-page-actions .cbi-button-apply:hover,
+.cbi-page-actions .cbi-button-apply:focus,
+.cbi-button-apply:hover,
+.cbi-button-apply:focus,
+.cbi-button-reload:hover,
+.cbi-button-reload:focus,
+.cbi-button-edit:hover,
+.cbi-button-edit:focus,
+.cbi-section-actions .cbi-button-edit:hover,
+.cbi-section-actions .cbi-button-edit:focus {
+    color: rgb(var(--color-on-primary));
+    background:
+        linear-gradient(rgba(var(--color-on-primary), 0.08), rgba(var(--color-on-primary), 0.08)),
+        rgb(var(--color-primary));
+    box-shadow: var(--elevation-level2);
+}
+
+.cbi-button-positive:hover,
+.cbi-button-positive:focus,
+.cbi-button-fieldadd:hover,
+.cbi-button-fieldadd:focus,
+.cbi-button-add:hover,
+.cbi-button-add:focus,
+.cbi-button-save:hover,
+.cbi-button-save:focus {
+    color: rgb(var(--color-green-primary));
+    background: rgba(var(--color-green-primary), 0.08);
+    border-color: rgba(var(--color-green-primary), 0.65);
+    box-shadow: var(--elevation-level1);
+}
+
+.cbi-button-neutral:hover,
+.cbi-button-neutral:focus,
+.cbi-button-download:hover,
+.cbi-button-download:focus,
+.cbi-button-find:hover,
+.cbi-button-find:focus,
+.cbi-button-link:hover,
+.cbi-button-link:focus,
+.cbi-button-up:hover,
+.cbi-button-up:focus,
+.cbi-button-down:hover,
+.cbi-button-down:focus {
+    color: rgb(var(--color-secondary));
+    background:
+        linear-gradient(rgba(var(--color-on-secondary-container), 0.08), rgba(var(--color-on-secondary-container), 0.08)),
+        rgb(var(--color-secondary-container));
+    box-shadow: var(--elevation-level2);
+}
+
+.cbi-button-positive.important:hover,
+.cbi-button-positive.important:focus,
+.cbi-page-actions .cbi-button-save:hover,
+.cbi-page-actions .cbi-button-save:focus {
+    color: rgb(var(--color-green-on-primary));
+    background:
+        linear-gradient(rgba(var(--color-green-on-primary), 0.08), rgba(var(--color-green-on-primary), 0.08)),
+        rgb(var(--color-green-primary));
+    box-shadow: var(--elevation-level2);
+}
+
+.actions,
+.cbi-page-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.actions .secondary-action,
+.cbi-page-actions .secondary-action {
+    margin-right: auto;
+}
+
+.actions .secondary-action a,
+.cbi-page-actions .secondary-action a {
+    color: rgb(var(--color-primary));
+}
+
+.cbi-page-actions>form {
+    display: inline-flex;
+    gap: 0.5rem;
+    margin: 0;
+}
+
+.cbi-page-actions::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.cbi-page-actions .cbi-button-apply+.cbi-button-save,
+.cbi-page-actions .cbi-button-negative+.cbi-button-save {
+    margin-left: 0.25rem;
+}
+
+.close {
+    float: right;
+    color: rgb(var(--color-on-surface-variant));
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.7;
+}
+
+.close:hover {
+    color: rgb(var(--color-on-surface));
+    opacity: 1;
+    text-decoration: none;
 }

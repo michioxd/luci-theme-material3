@@ -1,0 +1,173 @@
+.table {
+    display: table;
+    width: 100%;
+    margin: 1rem 0;
+    overflow: hidden;
+    color: rgb(var(--color-on-surface));
+    background: rgb(var(--color-surface-container-low));
+    border-radius: var(--shape-corner-medium);
+    box-shadow: var(--elevation-level1);
+}
+
+.tr {
+    display: table-row;
+}
+
+.table .th,
+.table .td {
+    display: table-cell;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgb(var(--color-outline-variant));
+    vertical-align: top;
+}
+
+.table .tr:first-child .th,
+.tr.table-titles,
+.tr.cbi-section-table-titles,
+.cbi-section-table-titles {
+    color: rgb(var(--color-on-surface-variant));
+    background: rgb(var(--color-surface-container));
+    font-weight: 600;
+}
+
+.table .tr:last-child .td,
+.table .tr:last-child .th {
+    border-bottom: 0;
+}
+
+.tr.placeholder {
+    color: rgb(var(--color-on-surface-variant));
+    font-style: italic;
+}
+
+.tr.placeholder>.td {
+    text-align: center;
+}
+
+.tr.drag-over-above,
+.tr.drag-over-below {
+    box-shadow: inset 0 2px 0 rgb(var(--color-primary));
+}
+
+.tr.drag-over-below {
+    box-shadow: inset 0 -2px 0 rgb(var(--color-primary));
+}
+
+.table[width="33%"],
+.th[width="33%"],
+.td[width="33%"] {
+    width: 33%;
+}
+
+.table[width="100%"],
+.th[width="100%"],
+.td[width="100%"] {
+    width: 100%;
+}
+
+.cbi-section-table .tr:hover .td,
+.cbi-section-table .tr:hover .th,
+.cbi-section-table .tr:hover::before {
+    background: rgba(var(--color-primary), 0.08);
+}
+
+.cbi-section-table .tr.cbi-section-table-descr .th {
+    font-weight: 400;
+}
+
+.cbi-section-table-descr.named::before,
+.cbi-section-table-row[data-title]::before {
+    content: none;
+}
+
+.cbi-section-table-titles.named::before,
+.cbi-section-table-descr.named::before,
+.cbi-section-table-row[data-title]::before {
+    border-top: 1px solid rgb(var(--color-outline-variant));
+}
+
+table table td,
+.cbi-value-field table td {
+    border: none;
+}
+
+.table.cbi-section-table input[type="password"],
+.table.cbi-section-table input[type="text"],
+.table.cbi-section-table textarea,
+.table.cbi-section-table select,
+.table.cbi-section-table .cbi-select {
+    width: 100%;
+    min-width: auto;
+}
+
+.table.cbi-section-table .td.cbi-section-table-cell {
+    white-space: nowrap;
+    text-align: right;
+}
+
+.table.cbi-section-table .td.cbi-section-table-cell select,
+.table.cbi-section-table .td.cbi-section-table-cell .cbi-select {
+    width: inherit;
+}
+
+.td.cbi-section-actions {
+    width: 15%;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.td.cbi-section-actions>* {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.td.cbi-section-actions> :not(.cbi-dropdown)>*,
+.td.cbi-section-actions>*>form>* {
+    margin: 0 1px;
+}
+
+.td.cbi-section-actions>*>form {
+    display: inline-flex;
+    margin: 0;
+}
+
+.table.valign-middle .td {
+    vertical-align: middle;
+}
+
+.cbi-rowstyle-2 {
+    background: rgb(var(--color-surface-container));
+}
+
+th[data-sortable-row] {
+    cursor: pointer;
+}
+
+th[data-sort-direction="asc"]::after {
+    content: "\a0\25b2";
+}
+
+th[data-sort-direction="desc"]::after {
+    content: "\a0\25bc";
+}
+
+@media screen and (max-width: 767px) {
+
+    .table.cbi-section-table,
+    .table.cbi-section-table .tr,
+    .table.cbi-section-table .td,
+    .table.cbi-section-table .th {
+        display: block;
+        width: 100% !important;
+    }
+
+    .table.cbi-section-table .td,
+    .table.cbi-section-table .th {
+        text-align: left;
+        white-space: normal;
+    }
+
+    .td.cbi-section-actions>* {
+        justify-content: stretch;
+    }
+}

@@ -44,6 +44,7 @@
 		<script src="{{ dispatcher.build_url('admin/translations', dispatcher.lang) }}"></script>
 		<script src="{{ resource }}/cbi.js"></script>
 		<script src="{{ media }}/js/ripple.js" async></script>
+		<script src="{{ media }}/js/spinner.js" async></script>
 	</head>
 
 	<body class="lang_{{ dispatcher.lang }} {{ entityencode(striptags(node?.title ?? ''), true) }}" data-page="{{ entityencode(join('-', length(ctx.request_path) ? ctx.request_path : ctx.path), true) }}">

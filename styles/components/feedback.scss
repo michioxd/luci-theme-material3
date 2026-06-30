@@ -1,0 +1,205 @@
+.alert-message,
+.cbi-tooltip,
+.label,
+header [data-indicator] {
+    border-radius: var(--shape-corner-small);
+}
+
+.alert-message {
+    position: relative;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-on-surface));
+    background: rgb(var(--color-surface-container-high));
+    box-shadow: var(--elevation-level1);
+    white-space: unset;
+}
+
+.alert-message.danger,
+.alert-message.error,
+.btn.danger,
+.btn.error,
+.cbi-tooltip.error {
+    color: rgb(var(--color-on-error-container));
+    background: rgb(var(--color-error-container));
+}
+
+.alert-message.success,
+.btn.success,
+.cbi-tooltip.success {
+    color: rgb(var(--color-green-on-primary-container));
+    background: rgb(var(--color-green-primary-container));
+}
+
+.alert-message.info,
+.btn.info,
+.cbi-tooltip.info,
+.alert-message.notice,
+.cbi-tooltip.notice {
+    color: rgb(var(--color-on-primary-container));
+    background: rgb(var(--color-primary-container));
+}
+
+.alert-message.warning,
+.cbi-tooltip.warning {
+    color: rgb(var(--color-on-surface));
+    background: rgba(var(--color-yellow-primary), 0.22);
+}
+
+.alert-message .close {
+    margin-top: 0.125rem;
+}
+
+.alert-message h4,
+.alert-message h5,
+.alert-message pre,
+.alert-message ul,
+.alert-message li,
+.alert-message p {
+    color: inherit;
+    border: none;
+    line-height: inherit;
+    background: transparent;
+    padding: 0;
+    margin: 0.25rem 0;
+}
+
+.alert-message button {
+    margin: 0.25rem 0;
+}
+
+.label,
+header [data-indicator] {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.5rem;
+    padding: 0 0.5rem;
+    margin: 0.125rem 0 0.125rem 0.4rem;
+    color: rgb(var(--color-on-secondary-container));
+    background: rgb(var(--color-secondary-container));
+    font-size: var(--typescale-label-small-size);
+    font-weight: var(--typescale-label-small-weight);
+    line-height: var(--typescale-label-small-line-height);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.label.important,
+.label.notice,
+header [data-indicator][data-style="active"] {
+    color: rgb(var(--color-on-primary));
+    background: rgb(var(--color-primary));
+}
+
+.label.warning {
+    color: rgb(var(--color-on-surface));
+    background: rgba(var(--color-yellow-primary), 0.28);
+}
+
+.label.success {
+    color: rgb(var(--color-green-on-primary));
+    background: rgb(var(--color-green-primary));
+}
+
+a.label:link,
+a.label:visited,
+a.label:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.cbi-tooltip-container {
+    cursor: help;
+}
+
+.cbi-tooltip {
+    position: absolute;
+    z-index: 2300;
+    left: -10000px;
+    max-width: min(24rem, 90vw);
+    padding: 0.5rem 0.75rem;
+    color: rgb(var(--color-inverse-on-surface));
+    background: rgb(var(--color-inverse-surface));
+    box-shadow: var(--elevation-level2);
+    white-space: pre-wrap;
+    opacity: 0;
+    transition: opacity var(--motion-duration-medium1) var(--motion-easing-standard);
+}
+
+.cbi-tooltip-container:hover .cbi-tooltip:not(:empty) {
+    left: auto;
+    opacity: 1;
+}
+
+.cbi-title-ref {
+    color: rgb(var(--color-primary));
+}
+
+.cbi-title-ref::after {
+    content: "➙";
+}
+
+.cbi-section-error {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-on-error-container));
+    background: rgb(var(--color-error-container));
+    border-radius: var(--shape-corner-medium);
+}
+
+.cbi-section-error ul {
+    margin: 0 0 0 1.25rem;
+}
+
+.cbi-section-error ul li {
+    color: inherit;
+    font-weight: 700;
+}
+
+.modal.alert-message {
+    margin-bottom: 0;
+}
+
+.flash {
+    animation: flash 0.35s var(--motion-easing-standard);
+}
+
+.fade-in {
+    animation: fade-in 0.4s var(--motion-easing-standard);
+}
+
+.fade-out {
+    animation: fade-out 0.4s var(--motion-easing-standard);
+}
+
+@keyframes flash {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

@@ -58,7 +58,7 @@ return baseclass.extend({
         children.forEach((child) => {
             const submenu = this.renderMainMenu(child, url + "/" + child.name, (level || 0) + 1);
             const subclass = !level && submenu.firstElementChild ? "dropdown" : "";
-            const linkclass = !level && submenu.firstElementChild ? "menu" : "";
+            const linkclass = !level && submenu.firstElementChild ? "menu ripple-js" : "ripple-js";
             const linkurl = submenu.firstElementChild ? "#" : L.url(url, child.name);
 
             const li = E("li", { class: subclass }, [

@@ -2,7 +2,8 @@
 		</div>
 		<footer>
 			<span>
-				Hello world! Powered by
+				<a href="https://github.com/michioxd/luci-theme-material3" target="_blank" rel="noreferrer">
+					Material 3 LuCI Theme</a> by <a href="https://github.com/michioxd" target="_blank" rel="noreferrer">michioxd</a>. Powered by
 				<a href="https://github.com/openwrt/luci" target="_blank" rel="noreferrer">
 					{{ version.luciname }} ({{ version.luciversion }})</a>
 				/

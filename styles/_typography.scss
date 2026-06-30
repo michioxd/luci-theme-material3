@@ -1,0 +1,101 @@
+p,
+.cbi-map-descr,
+.cbi-section-descr,
+.table .tr.cbi-section-table-descr .th {
+    margin: 0 0 1rem;
+    color: rgb(var(--color-on-surface-variant));
+    font-size: var(--typescale-body-medium-size);
+    font-weight: var(--typescale-body-medium-weight);
+    letter-spacing: var(--typescale-body-medium-tracking);
+    line-height: var(--typescale-body-medium-line-height);
+}
+
+small,
+p small,
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+    color: rgb(var(--color-on-surface-variant));
+    font-size: var(--typescale-body-small-size);
+    line-height: var(--typescale-body-small-line-height);
+}
+
+h1,
+h2,
+h3,
+legend,
+h4,
+h5,
+h6 {
+    margin: 1.5rem 0 1rem;
+    color: rgb(var(--color-on-surface));
+    text-wrap: balance;
+}
+
+h1 {
+    font-size: var(--typescale-headline-large-size);
+    font-weight: var(--typescale-headline-large-weight);
+    line-height: var(--typescale-headline-large-line-height);
+}
+
+h2 {
+    font-size: var(--typescale-headline-medium-size);
+    font-weight: var(--typescale-headline-medium-weight);
+    line-height: var(--typescale-headline-medium-line-height);
+}
+
+h3,
+legend {
+    font-size: var(--typescale-headline-small-size);
+    font-weight: var(--typescale-headline-small-weight);
+    line-height: var(--typescale-headline-small-line-height);
+}
+
+h4,
+.cbi-title {
+    font-size: var(--typescale-title-large-size);
+    font-weight: var(--typescale-title-large-weight);
+    line-height: var(--typescale-title-large-line-height);
+}
+
+h5 {
+    font-size: var(--typescale-title-medium-size);
+    font-weight: var(--typescale-title-medium-weight);
+    line-height: var(--typescale-title-medium-line-height);
+}
+
+h6 {
+    font-size: var(--typescale-title-small-size);
+    font-weight: var(--typescale-title-small-weight);
+    line-height: var(--typescale-title-small-line-height);
+}
+
+dl {
+    margin: 0 0 1rem;
+}
+
+dl dt {
+    color: rgb(var(--color-on-surface));
+    font-weight: 600;
+}
+
+dl dd {
+    margin-left: 1rem;
+    color: rgb(var(--color-on-surface-variant));
+}
+
+strong {
+    font-weight: 700;
+}
+
+em,
+address {
+    font-style: italic;
+}
+
+address {
+    margin-bottom: 1rem;
+}
