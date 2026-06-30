@@ -5,6 +5,8 @@ HOST="${HOST:-root@192.168.56.2}"
 THEME="${THEME:-material3}"
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+bun watch:css &
+
 sync_theme() {
   echo "==> Prepare dirs"
   ssh "$HOST" "

@@ -33,7 +33,7 @@
 
 [data-darkmode="true"] .zonebadge[style],
 [data-darkmode="true"] .ifacebox-head[style] {
-    background: linear-gradient(rgba(var(--zone-color-rgb), 0.4), rgba(var(--zone-color-rgb), 0.3)) !important;
+    background: rgba(var(--zone-color-rgb), 0.4) !important;
 }
 
 .ifacebox .ifacebox-body {
