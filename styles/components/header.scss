@@ -73,3 +73,62 @@ header [data-indicator][data-style="active"] {
     color: rgb(var(--color-on-primary));
     background: rgb(var(--color-primary));
 }
+
+@media screen and (max-width: 600px), screen and (max-device-width: 600px) {
+    header {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 4rem;
+        padding: 0.5rem;
+        gap: 0.25rem;
+    }
+
+    header h3 a,
+    header .brand {
+        display: none !important;
+    }
+
+    header .nav {
+        flex: 3 1 70%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0.25rem;
+        margin: 0.125rem 0.25rem 0.125rem 0;
+    }
+
+    header .nav a {
+        min-height: 2rem;
+        padding: 0 0.625rem;
+        font-size: var(--typescale-label-medium-size);
+    }
+
+    header .pull-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-around;
+        gap: 0.125rem;
+        max-width: 35%;
+        padding: 0;
+        margin: 0.125rem 0 0.125rem auto;
+    }
+
+    header .pull-right .label,
+    header [data-indicator] {
+        display: inline-flex;
+        justify-content: center;
+        min-height: 1.25rem;
+        margin: 0;
+        line-height: 1.1;
+        text-align: center;
+        white-space: normal;
+    }
+
+    header .menu-dropdown,
+    header .dropdown-menu {
+        top: calc(100% + 0.25rem);
+        max-width: calc(100vw - 1rem);
+    }
+}
