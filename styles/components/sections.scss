@@ -20,6 +20,11 @@ fieldset,
     h3 {
         margin-top: 0;
     }
+
+    .cbi-section {
+        background: rgb(var(--color-surface-container-highest));
+        margin-bottom: 0;
+    }
 }
 
 .modal .cbi-section {

@@ -2,7 +2,7 @@
     "use strict";
 
     var rippleTypeAttr = "data-ripple-event";
-    var rippleSelector = "ripple-js rippleJS btn cbi-button";
+    var rippleSelector = '.ripple-js, .rippleJS, .btn, .cbi-button, span.label, span[data-indicator="poll-status"]';
     var cleanupDelay = 650;
     var isInitialized = false;
 
@@ -22,13 +22,15 @@
             .replace(/^\s+|\s+$/g, "");
     }
 
+    function matchesSelector(element, selector) {
+        var matches =
+            element.matches || element.msMatchesSelector || element.webkitMatchesSelector || element.mozMatchesSelector;
+
+        return matches ? matches.call(element, selector) : false;
+    }
+
     function isRippleHolder(element) {
-        return (
-            hasClass(element, "ripple-js") ||
-            hasClass(element, "rippleJS") ||
-            hasClass(element, "btn") ||
-            hasClass(element, "cbi-button")
-        );
+        return matchesSelector(element, rippleSelector);
     }
 
     function findRippleHolder(target) {

@@ -2,11 +2,17 @@
     position: fixed;
     inset: 0;
     z-index: 2300;
-    display: none;
+    display: flex;
     justify-content: center;
     padding: 3rem;
     background: rgba(var(--color-scrim), 0.4);
     overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+        opacity var(--motion-duration-short4) var(--motion-easing-standard),
+        visibility 0s linear var(--motion-duration-short4);
 }
 
 body.modal-overlay-active {
@@ -14,7 +20,10 @@ body.modal-overlay-active {
 }
 
 body.modal-overlay-active #modal_overlay {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0s;
 }
 
 .modal {
@@ -28,10 +37,21 @@ body.modal-overlay-active #modal_overlay {
     background: rgb(var(--color-surface-container-high));
     border-radius: var(--shape-corner-extra-large);
     box-shadow: var(--elevation-level3);
+    opacity: 0;
+    transform: scale(0.98);
+    transform-origin: center;
+    transition:
+        opacity var(--motion-duration-short4) var(--motion-easing-standard),
+        transform var(--motion-duration-short4) var(--motion-easing-standard);
 
     h4 {
         margin-top: 0;
     }
+}
+
+body.modal-overlay-active .modal {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .modal>* {

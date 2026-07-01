@@ -25,6 +25,7 @@
 
     function ensureSpinner(element) {
         if (!element || element.nodeType !== 1) return;
+        if (/^(tr|thead|tbody|tfoot)$/i.test(element.tagName)) return;
 
         for (let child = element.firstElementChild; child; child = child.nextElementSibling) {
             if (child.classList.contains("md-spinner")) return;

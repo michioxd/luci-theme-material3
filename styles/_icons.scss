@@ -1,0 +1,30 @@
+@use "sass:map";
+
+$icons: (
+    arrow_drop_up: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' width='24px'><path d='m280-400 200-200 200 200H280Z' /></svg>",
+    arrow_drop_down: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' width='24px'><path d='M480-360 280-560h400L480-360Z'/></svg>"
+);
+
+@function icon($name) {
+    $icon: map.get($icons, $name);
+
+    @if $icon ==null {
+        @error "Unknown icon: #{$name}";
+    }
+
+    @return url("data:image/svg+xml;utf8,#{$icon}");
+}
+
+@mixin icon($name, $width: 20px, $height: $width) {
+    content: "";
+    display: inline-block;
+    flex-shrink: 0;
+
+    width: $width;
+    height: $height;
+
+    background-color: currentColor;
+
+    -webkit-mask: icon($name) center / contain no-repeat;
+    mask: icon($name) center / contain no-repeat;
+}

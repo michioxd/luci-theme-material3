@@ -18,6 +18,10 @@
 <html lang="{{ dispatcher.lang }}" {{ darkpref ? `data-darkmode="${darkpref}"` : '' }}>
 	<head>
 		<meta charset="utf-8">
+		<meta name="robots" content="noindex, nofollow">
+		<meta http-equiv="X-Content-Type-Options" content="nosniff">
+		<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+		<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 		<title>{{ striptags(`${boardinfo.hostname ?? '?'}${dispatched?.title ? ` | ${_(dispatched.title)}` : ''}`) }}</title>
 		{% if (!darkpref): %}
 			<script>
