@@ -13,7 +13,7 @@ header {
     border-bottom-right-radius: var(--shape-corner);
     z-index: var(--z-index);
     transition: top var(--motion-duration-long2) var(--motion-easing-standard), height var(--motion-duration-long2) var(--motion-easing-standard), box-shadow var(--motion-duration-short4) var(--motion-easing-linear), background-color var(--motion-duration-short4) var(--motion-easing-linear);
-    padding: 0.75rem 0.5rem;
+    padding: 0.75rem max(0.5rem, calc((100% - 1280px) / 2));
     height: 4rem;
     background: rgb(var(--color-surface-container));
     margin: 0 0 15px;
