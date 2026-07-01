@@ -7,6 +7,7 @@ input[type="submit"] {
     position: relative;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     flex-shrink: 0;
     overflow: hidden;
     text-align: center;
@@ -101,7 +102,7 @@ input[type="submit"]:hover {
 .cbi-button-add,
 .cbi-button-save {
     color: rgb(var(--color-green-primary));
-    --comp-ripple-state-layer-color: rgb(var(--color-green-primary));
+    --comp-ripple-state-layer-color: rgb(var(--color-green-on-primary));
     border: .0625rem solid rgba(var(--color-green-primary), 0.5);
 }
 
