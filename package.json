@@ -1,7 +1,7 @@
 {
     "name": "luci-theme-material3",
     "scripts": {
-        "build:css": "sass styles/cascade.scss htdocs/luci-static/material3/cascade.css --style=compressed",
+        "build:css": "sass styles/cascade.scss:htdocs/luci-static/material3/cascade.css --style=compressed --no-source-map",
         "watch:css": "sass --watch styles/cascade.scss:htdocs/luci-static/material3/cascade.css --style=compressed"
     },
     "devDependencies": {

@@ -11,6 +11,7 @@ $(if $(wildcard $(CURDIR)/htdocs/luci-static/material3/cascade.css),,\
 
 LUCI_TITLE:=Material 3 Theme
 LUCI_DEPENDS:=+luci-base
+LUCI_MINIFY_CSS:=0
 PKG_VERSION:=0.1
 PKG_RELEASE:=20260701
 
