@@ -1,5 +1,39 @@
 		{% if (!blank_page): %}
 		</div>
+		<div class="cbi-section">
+			<h4>Icon testing</h4>
+			<div class="icon-testing-grid">
+				<img src="/luci-static/resources/icons/alias.svg" alt="alias" title="alias.svg">
+				<img src="/luci-static/resources/icons/alias_disabled.svg" alt="alias disabled" title="alias_disabled.svg">
+				<img src="/luci-static/resources/icons/bridge.svg" alt="bridge" title="bridge.svg">
+				<img src="/luci-static/resources/icons/bridge_disabled.svg" alt="bridge disabled" title="bridge_disabled.svg">
+				<img src="/luci-static/resources/icons/ethernet.svg" alt="ethernet" title="ethernet.svg">
+				<img src="/luci-static/resources/icons/ethernet_disabled.svg" alt="ethernet disabled" title="ethernet_disabled.svg">
+				<img src="/luci-static/resources/icons/loading.svg" alt="loading" title="loading.svg">
+				<img src="/luci-static/resources/icons/port_down.svg" alt="port down" title="port_down.svg">
+				<img src="/luci-static/resources/icons/port_pse_down.svg" alt="port pse down" title="port_pse_down.svg">
+				<img src="/luci-static/resources/icons/port_pse_up.svg" alt="port pse up" title="port_pse_up.svg">
+				<img src="/luci-static/resources/icons/port_up.svg" alt="port up" title="port_up.svg">
+				<img src="/luci-static/resources/icons/signal-000-000.svg" alt="signal 000 000" title="signal-000-000.svg">
+				<img src="/luci-static/resources/icons/signal-000-025.svg" alt="signal 000 025" title="signal-000-025.svg">
+				<img src="/luci-static/resources/icons/signal-025-050.svg" alt="signal 025 050" title="signal-025-050.svg">
+				<img src="/luci-static/resources/icons/signal-050-075.svg" alt="signal 050 075" title="signal-050-075.svg">
+				<img src="/luci-static/resources/icons/signal-075-100.svg" alt="signal 075 100" title="signal-075-100.svg">
+				<img src="/luci-static/resources/icons/signal-none.svg" alt="signal none" title="signal-none.svg">
+				<img src="/luci-static/resources/icons/switch.svg" alt="switch" title="switch.svg">
+				<img src="/luci-static/resources/icons/switch_disabled.svg" alt="switch disabled" title="switch_disabled.svg">
+				<img src="/luci-static/resources/icons/tunnel.svg" alt="tunnel" title="tunnel.svg">
+				<img src="/luci-static/resources/icons/tunnel_disabled.svg" alt="tunnel disabled" title="tunnel_disabled.svg">
+				<img src="/luci-static/resources/icons/vlan.svg" alt="vlan" title="vlan.svg">
+				<img src="/luci-static/resources/icons/vlan_disabled.svg" alt="vlan disabled" title="vlan_disabled.svg">
+				<img src="/luci-static/resources/icons/vrf.svg" alt="vrf" title="vrf.svg">
+				<img src="/luci-static/resources/icons/vrf_disabled.svg" alt="vrf disabled" title="vrf_disabled.svg">
+				<img src="/luci-static/resources/icons/wifi.svg" alt="wifi" title="wifi.svg">
+				<img src="/luci-static/resources/icons/wifi_disabled.svg" alt="wifi disabled" title="wifi_disabled.svg">
+				<img src="/luci-static/resources/icons/wireguard.svg" alt="wireguard" title="wireguard.svg">
+				<img src="/luci-static/resources/icons/wireguard_disabled.svg" alt="wireguard disabled" title="wireguard_disabled.svg">
+			</div>
+		</div>
 		<footer>
 			<span>
 				<a href="https://github.com/michioxd/luci-theme-material3" target="_blank" rel="noreferrer">
