@@ -315,6 +315,20 @@ div.cbi-value var.cbi-tooltip-container,
     animation: material-spinner-container-rotate 1568ms linear infinite;
 }
 
+.modal.spinning {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1.5rem !important;
+
+    &>.md-spinner {
+        position: relative;
+        width: 25px;
+        height: 25px;
+        flex: 0 0 25px;
+    }
+}
+
 .spinning>.md-spinner>.spinner {
     position: absolute;
     top: 0;
