@@ -3,7 +3,9 @@
 .cbi-button,
 span.label,
 .rippleJS,
-span[data-indicator="poll-status"] {
+span[data-indicator="poll-status"],
+li.cbi-tab-disabled,
+li.cbi-tab {
     position: relative;
     overflow: hidden;
     mask-image: radial-gradient(circle, white, black);

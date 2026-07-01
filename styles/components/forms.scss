@@ -37,25 +37,27 @@ label[for] {
 
 .cbi-value {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
-    align-items: flex-start;
+    align-items: baseline;
     margin: 0 0 1rem;
 }
 
 .cbi-value label.cbi-value-title {
-    flex: 0 0 14rem;
-    padding-top: 0.875rem;
+    flex: 0 0 180px;
+    padding-top: 0.375rem;
+    text-align: right;
     overflow-wrap: anywhere;
 }
 
 .cbi-value-field {
-    flex: 1 1 auto;
+    flex: 1;
     min-width: 0;
 }
 
 .cbi-value>.cbi-section,
 .cbi-value>.cbi-tblsection {
-    flex: 1 1 100%;
+    width: 100%;
 }
 
 input,
@@ -63,9 +65,10 @@ textarea,
 select,
 .cbi-select,
 .cbi-dropdown:not(.btn):not(.cbi-button) {
+    display: inline-block;
     min-height: 3.5rem;
-    min-width: 12rem;
-    width: 50%;
+    min-width: 210px;
+    width: 210px;
     max-width: 100%;
     padding: 1rem;
     color: rgb(var(--color-on-surface));
@@ -89,6 +92,18 @@ select,
 .cbi-select,
 .cbi-dropdown:not(.btn):not(.cbi-button) {
     cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    #localtime {
+        width: 300px;
+    }
+}
+
+.cbi-dropdown:not(.btn):not(.cbi-button),
+.cbi-dynlist {
+    min-width: 210px;
+    max-width: 400px;
 }
 
 input:hover,
@@ -135,6 +150,8 @@ input[readonly],
 select[readonly],
 textarea[readonly] {
     background: rgba(var(--color-on-surface), 0.04);
+    pointer-events: auto;
+    cursor: auto;
 }
 
 input[type="search"] {
@@ -146,7 +163,11 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 input[type="file"] {
-    padding: 0.75rem;
+    width: auto !important;
+    padding: initial;
+    border: initial;
+    line-height: initial;
+    box-shadow: none;
 }
 
 input[type="button"],
@@ -154,6 +175,7 @@ input[type="reset"],
 input[type="submit"] {
     min-width: 3rem;
     width: auto;
+    height: auto;
 }
 
 select[multiple] {
@@ -320,15 +342,17 @@ label>input[type="radio"] {
 }
 
 .cbi-section-create {
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     align-items: center;
+    margin: -0.25rem;
 }
 
-// .cbi-section-create>* {
-//     flex: 1 1 auto;
-// }
+.cbi-section-create>* {
+    // flex: 1 1 auto;
+    margin: 0.25rem;
+}
 
 .cbi-section-create>*>input {
     width: 100%;
@@ -367,6 +391,7 @@ label>input[type="radio"] {
 
     .cbi-value label.cbi-value-title {
         display: block;
+        text-align: left;
         padding-top: 0;
         margin-bottom: 0.375rem;
     }

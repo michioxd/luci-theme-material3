@@ -2,7 +2,8 @@
     "use strict";
 
     var rippleTypeAttr = "data-ripple-event";
-    var rippleSelector = '.ripple-js, .rippleJS, .btn, .cbi-button, span.label, span[data-indicator="poll-status"]';
+    var rippleSelector =
+        '.ripple-js, .rippleJS, .btn, .cbi-button, span.label, span[data-indicator="poll-status"], li.cbi-tab-disabled, li.cbi-tab';
     var cleanupDelay = 650;
     var isInitialized = false;
 
