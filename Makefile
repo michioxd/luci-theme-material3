@@ -11,6 +11,8 @@ $(if $(wildcard $(CURDIR)/htdocs/luci-static/material3/cascade.css),,\
 
 LUCI_TITLE:=Material 3 Theme
 LUCI_DEPENDS:=+luci-base
+PKG_VERSION:=0.1
+PKG_RELEASE:=20260701
 
 PKG_LICENSE:=Apache-2.0
 
@@ -22,6 +24,6 @@ define Package/luci-theme-material3/postrm
 }
 endef
 
-include ../../luci.mk
+include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
