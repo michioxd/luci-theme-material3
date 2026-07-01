@@ -1,6 +1,6 @@
 		{% if (!blank_page): %}
 		</div>
-		<div class="cbi-section">
+		{#<div class="cbi-section">
 			<h4>Icon testing</h4>
 			<div class="icon-testing-grid">
 				<img src="/luci-static/resources/icons/alias.svg" alt="alias" title="alias.svg">
@@ -33,7 +33,7 @@
 				<img src="/luci-static/resources/icons/wireguard.svg" alt="wireguard" title="wireguard.svg">
 				<img src="/luci-static/resources/icons/wireguard_disabled.svg" alt="wireguard disabled" title="wireguard_disabled.svg">
 			</div>
-		</div>
+		</div>#}
 		<footer>
 			<span>
 				<a href="https://github.com/michioxd/luci-theme-material3" target="_blank" rel="noreferrer">
