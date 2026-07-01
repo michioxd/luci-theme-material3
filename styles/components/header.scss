@@ -74,7 +74,8 @@ header [data-indicator][data-style="active"] {
     background: rgb(var(--color-primary));
 }
 
-@media screen and (max-width: 600px), screen and (max-device-width: 600px) {
+@media screen and (max-width: 600px),
+screen and (max-device-width: 600px) {
     header {
         align-items: flex-start;
         flex-wrap: wrap;
