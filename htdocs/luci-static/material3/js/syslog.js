@@ -76,7 +76,10 @@
 
     function isLogPage() {
         const page = document.body ? document.body.getAttribute("data-page") || "" : "";
-        return /(^|-)logs($|-)|syslog|dmesg/.test(page) || /\/status\/logs/.test(location.pathname);
+        return (
+            /(^|-)logs($|-)|syslog|dmesg|acme.*logread/.test(page) ||
+            /\/status\/logs|\/services\/acme\/logread/.test(location.pathname)
+        );
     }
 
     function escapeHtml(value) {
