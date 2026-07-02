@@ -4,7 +4,13 @@ on:
     push:
         branches:
             - main
+        paths:
+            - "styles/**/*"
+            - "**/*.js"
     pull_request:
+        paths:
+            - "styles/**/*"
+            - "**/*.js"
 
 jobs:
     prettier:
