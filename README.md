@@ -1,6 +1,6 @@
 # luci-theme-material3
 
-Material 3 theme for OpenWrt LuCI. This theme is based on [MDUI](https://github.com/zdhxiong/mdui/), Google Material 3 guidelines and aims to provide a modern and visually appealing user interface for OpenWrt LuCI Web interface. soon(TM) btw
+Material 3 theme for OpenWrt LuCI. This theme is based on [MDUI](https://github.com/zdhxiong/mdui/), [Google Material 3](https://m3.material.io/) guidelines and aims to provide a modern and visually appealing user interface for OpenWrt LuCI Web interface. soon(TM) btw
 
 ## Screenshots
 
