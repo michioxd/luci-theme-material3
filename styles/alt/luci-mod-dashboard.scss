@@ -1,0 +1,27 @@
+// For package luci-mod-dashboard
+
+.Dashboard .settings-info p span:nth-child(2) {
+    display: inline-flex !important;
+}
+
+html[data-darkmode="true"] .Dashboard img.middle.svgmonotone {
+    filter: invert(100%) hue-rotate(150deg);
+}
+
+.Dashboard .title {
+    img {
+        width: 64px !important;
+    }
+
+    h3 {
+        margin-top: 6px !important;
+    }
+}
+
+.Dashboard .internet-status-self .internet-status-info .title {
+    height: fit-content !important;
+}
+
+.Dashboard .devices-list .devices-info {
+    width: 100% !important;
+}
