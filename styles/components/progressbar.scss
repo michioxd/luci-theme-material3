@@ -6,10 +6,10 @@
     min-width: 170px;
     border-radius: var(--shape-corner);
     background-color: rgb(var(--color-surface-container-highest));
-    height: .25rem;
+    height: 0.25rem;
     margin: 1.5rem 0 0.5rem;
 
-    &>div {
+    & > div {
         height: 100%;
         transition: width var(--motion-duration-long2) var(--motion-easing-standard);
         background-color: rgb(var(--color-primary));

@@ -33,8 +33,12 @@ li.cbi-tab {
         opacity: 0.4;
         width: 0;
         height: 0;
-        -webkit-transition: -webkit-transform 0.5s ease-out, opacity 0.5s ease-out;
-        transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        -webkit-transition:
+            -webkit-transform 0.5s ease-out,
+            opacity 0.5s ease-out;
+        transition:
+            transform 0.5s ease-out,
+            opacity 0.5s ease-out;
 
         -webkit-transform: scale(0);
         transform: scale(0);
@@ -54,7 +58,7 @@ li.cbi-tab {
         }
 
         &.done {
-            opacity: 0.0 !important;
+            opacity: 0 !important;
             -webkit-transform: scale(1);
             transform: scale(1);
         }

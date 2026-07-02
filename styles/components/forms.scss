@@ -55,8 +55,8 @@ label[for] {
     min-width: 0;
 }
 
-.cbi-value>.cbi-section,
-.cbi-value>.cbi-tblsection {
+.cbi-value > .cbi-section,
+.cbi-value > .cbi-tblsection {
     width: 100%;
 }
 
@@ -78,7 +78,10 @@ select,
     box-shadow: inset 0 -1px 0 rgb(var(--color-on-surface-variant));
     font-size: var(--typescale-body-large-size);
     line-height: var(--typescale-body-large-line-height);
-    transition: background-color var(--motion-duration-short4) var(--motion-easing-standard), box-shadow var(--motion-duration-short4) var(--motion-easing-standard), color var(--motion-duration-short4) var(--motion-easing-standard);
+    transition:
+        background-color var(--motion-duration-short4) var(--motion-easing-standard),
+        box-shadow var(--motion-duration-short4) var(--motion-easing-standard),
+        color var(--motion-duration-short4) var(--motion-easing-standard);
 }
 
 textarea {
@@ -226,7 +229,9 @@ input[type="radio"]::after {
     position: absolute;
     box-sizing: border-box;
     opacity: 0;
-    transition: opacity var(--motion-duration-short4) var(--motion-easing-standard), transform var(--motion-duration-short4) var(--motion-easing-standard);
+    transition:
+        opacity var(--motion-duration-short4) var(--motion-easing-standard),
+        transform var(--motion-duration-short4) var(--motion-easing-standard);
 }
 
 input[type="checkbox"]::after {
@@ -262,8 +267,8 @@ input[type="radio"]:checked::after {
     transform: scale(1);
 }
 
-label>input[type="checkbox"],
-label>input[type="radio"] {
+label > input[type="checkbox"],
+label > input[type="radio"] {
     margin-right: 0.5rem;
 }
 
@@ -274,8 +279,8 @@ label>input[type="radio"] {
     margin-right: 1rem;
 }
 
-.cbi-value-field>.cbi-checkbox,
-.cbi-value-field>div>.cbi-radio {
+.cbi-value-field > .cbi-checkbox,
+.cbi-value-field > div > .cbi-radio {
     margin-top: 0.875rem;
 }
 
@@ -286,8 +291,8 @@ label>input[type="radio"] {
     align-items: center;
 }
 
-.control-group>input+ :not(input):not(select),
-.control-group>select+ :not(input):not(select) {
+.control-group > input + :not(input):not(select),
+.control-group > select + :not(input):not(select) {
     margin-left: 0.25rem;
 }
 
@@ -327,11 +332,11 @@ label>input[type="radio"] {
     background: rgb(var(--color-surface-container));
 }
 
-.td>input[type="text"],
-.td>input[type="password"],
-.td>select,
-.td>.cbi-dropdown:not(.btn):not(.cbi-button),
-.cbi-dynlist>.add-item>.cbi-dropdown {
+.td > input[type="text"],
+.td > input[type="password"],
+.td > select,
+.td > .cbi-dropdown:not(.btn):not(.cbi-button),
+.cbi-dynlist > .add-item > .cbi-dropdown {
     width: 100%;
     min-width: 0;
 }
@@ -349,12 +354,12 @@ label>input[type="radio"] {
     margin: -0.25rem;
 }
 
-.cbi-section-create>* {
+.cbi-section-create > * {
     // flex: 1 1 auto;
     margin: 0.25rem;
 }
 
-.cbi-section-create>*>input {
+.cbi-section-create > * > input {
     width: 100%;
 }
 
@@ -377,7 +382,7 @@ label>input[type="radio"] {
     color: rgb(var(--color-on-primary));
     background: rgb(var(--color-primary));
     border-radius: 50%;
-    font-size: .7rem;
+    font-size: 0.7rem;
     font-weight: 700;
     align-items: center;
     justify-content: center;

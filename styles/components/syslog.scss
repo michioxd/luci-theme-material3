@@ -67,7 +67,8 @@
 .md-log-stat,
 .md-log-button {
     cursor: pointer;
-    transition: background-color var(--motion-duration-short2) var(--motion-easing-standard),
+    transition:
+        background-color var(--motion-duration-short2) var(--motion-easing-standard),
         color var(--motion-duration-short2) var(--motion-easing-standard),
         border-color var(--motion-duration-short2) var(--motion-easing-standard),
         transform var(--motion-duration-short2) var(--motion-easing-standard);
@@ -93,7 +94,7 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-.md-log-button>svg {
+.md-log-button > svg {
     display: block;
     width: 1.5rem;
     height: 1.5rem;
@@ -298,7 +299,6 @@
 }
 
 @media (max-width: 600px) {
-
     .md-log-toolbar,
     .md-log-filter-row {
         align-items: stretch;

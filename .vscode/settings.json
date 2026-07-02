@@ -2,5 +2,6 @@
     "files.associations": {
         "*.ut": "html",
         "*.uc": "javascript"
-    }
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

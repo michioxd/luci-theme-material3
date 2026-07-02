@@ -2,9 +2,12 @@
     "name": "luci-theme-material3",
     "scripts": {
         "build:css": "sass styles/cascade.scss:htdocs/luci-static/material3/cascade.css --style=compressed --no-source-map",
-        "watch:css": "sass --watch styles/cascade.scss:htdocs/luci-static/material3/cascade.css --style=compressed"
+        "watch:css": "sass --watch styles/cascade.scss:htdocs/luci-static/material3/cascade.css --style=compressed",
+        "format": "prettier --write \"styles/**/*\" \"**/*.js\"",
+        "format:check": "prettier --check \"styles/**/*\" \"**/*.js\""
     },
     "devDependencies": {
+        "prettier": "^3.9.4",
         "sass": "^1.101.0"
     }
 }

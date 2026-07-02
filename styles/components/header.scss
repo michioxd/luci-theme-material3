@@ -12,7 +12,11 @@ header {
     border-bottom-left-radius: var(--shape-corner);
     border-bottom-right-radius: var(--shape-corner);
     z-index: var(--z-index);
-    transition: top var(--motion-duration-long2) var(--motion-easing-standard), height var(--motion-duration-long2) var(--motion-easing-standard), box-shadow var(--motion-duration-short4) var(--motion-easing-linear), background-color var(--motion-duration-short4) var(--motion-easing-linear);
+    transition:
+        top var(--motion-duration-long2) var(--motion-easing-standard),
+        height var(--motion-duration-long2) var(--motion-easing-standard),
+        box-shadow var(--motion-duration-short4) var(--motion-easing-linear),
+        background-color var(--motion-duration-short4) var(--motion-easing-linear);
     padding: 0.75rem max(0.5rem, calc((100% - 1280px) / 2));
     height: 4rem;
     background: rgb(var(--color-surface-container));
@@ -25,7 +29,7 @@ header a {
 }
 
 header .brand:hover,
-header ul .active>a {
+header ul .active > a {
     color: rgb(var(--color-primary));
     text-decoration: none;
 }
@@ -74,8 +78,7 @@ header [data-indicator][data-style="active"] {
     background: rgb(var(--color-primary));
 }
 
-@media screen and (max-width: 600px),
-screen and (max-device-width: 600px) {
+@media screen and (max-width: 600px), screen and (max-device-width: 600px) {
     header {
         align-items: flex-start;
         flex-wrap: wrap;

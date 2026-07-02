@@ -54,16 +54,16 @@ body.modal-overlay-active .modal {
     transform: scale(1);
 }
 
-.modal>* {
+.modal > * {
     max-width: 100%;
 }
 
-.modal>pre,
-.modal>textarea {
+.modal > pre,
+.modal > textarea {
     overflow: auto;
 }
 
-.modal>.button-row {
+.modal > .button-row {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -71,20 +71,20 @@ body.modal-overlay-active .modal {
     padding-top: 1.5rem;
 }
 
-.modal>.button-row>button:not(:last-of-type) {
+.modal > .button-row > button:not(:last-of-type) {
     margin-right: 0.25rem;
 }
 
-.modal>.button-row>button:first-of-type {
+.modal > .button-row > button:first-of-type {
     margin-left: auto;
 }
 
-#modal_overlay>.modal.uci-dialog,
-#modal_overlay>.modal.cbi-modal {
+#modal_overlay > .modal.uci-dialog,
+#modal_overlay > .modal.cbi-modal {
     max-width: 900px;
 }
 
-#modal_overlay>.modal.login>button.important {
+#modal_overlay > .modal.login > button.important {
     width: 100%;
     margin-top: 0.5rem;
     font-size: 120% !important;
